@@ -4,6 +4,7 @@ import Offers from "./Pages/Offers";
 import Catalog from "./Pages/Catalog";
 import Contact from "./Pages/Contact Us";
 import Home from "./Pages/HomePage";
+import Login from "./components/login form";
 
 const Path = () => (
   <Switch>
@@ -16,7 +17,10 @@ const Path = () => (
     <Route path="/contact us">
       <Contact />
     </Route>
-    <Route path="/">
+    <Route path="/login">
+      <Login />
+    </Route>
+    <Route path="/" exact>
       <Home />
     </Route>
   </Switch>

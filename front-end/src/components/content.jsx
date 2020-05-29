@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Content extends Component {
   render() {
@@ -14,8 +15,13 @@ class Content extends Component {
           </p>
           <footer className="blockquote-footer">George R.R. Martin</footer>
           <br />
+          <Link to="/login">
+            <button type="button" className="btn btn-primary m-2">
+              Login
+            </button>
+          </Link>
           <button type="button" className="btn btn-primary">
-            Shop Now
+            SignUp
           </button>
         </blockquote>
       </div>

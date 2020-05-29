@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import slide1 from "../elements/2.webp";
 import slide2 from "../elements/MemorialDayWeekendSaleHeader.jpg";
+import "../Styling/styling.css";
 
 class Carousel extends Component {
   render() {
