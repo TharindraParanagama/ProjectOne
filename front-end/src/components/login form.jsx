@@ -6,21 +6,25 @@ export default function Login() {
       <br />
       <div className="container">
         <div className="form-group col-lg-5">
-          <label htmlFor="exampleInputEmail1">Email address</label>
+          <label htmlFor="exampleInputEmail">Email address</label>
           <input
             type="email"
             className="form-control"
-            id="exampleInputEmail1"
+            id="exampleInputEmail"
             aria-describedby="emailHelp"
           />
         </div>
         <div className="form-group col-lg-5">
-          <label htmlFor="exampleInputPassword1">Password</label>
+          <label htmlFor="exampleInputPassword">Password</label>
           <input
             type="password"
             className="form-control"
-            id="exampleInputPassword1"
+            id="exampleInputPassword"
           />
+        </div>
+        <div className="form-group col-lg-5">
+          <label htmlFor="exampleInputRole">Role</label>
+          <input type="role" className="form-control" id="exampleInputRole" />
         </div>
         <button type="submit" className="btn btn-primary m-3">
           Submit
