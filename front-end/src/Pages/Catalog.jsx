@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 export default function Catalog() {
-  const [res, setRes] = useState();
+  const [search, setSearch] = useState();
 
-  useEffect(() => {
-    fetch("http://3.14.15.62:5000/search")
-      .then((result) => result.text())
-      .then((data) => setRes(data));
-  });
+  fetch("http://3.23.132.211:5000/search")
+    .then((result) => result.text())
+    .then((data) => setSearch(data));
 
   return (
     <>
-      <div>{res}</div>
+      <div>{search}</div>
     </>
   );
 }

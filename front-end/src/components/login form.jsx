@@ -1,32 +1,49 @@
 import React from "react";
 
-export default function Login() {
+export default function Login(props) {
   return (
     <form>
       <br />
       <div className="container">
-        <div className="form-group col-lg-5">
-          <label htmlFor="exampleInputEmail">Email address</label>
+        <div className="form-group col-lg-6">
+          <label htmlFor="InputEmail">Username:</label>
           <input
             type="email"
             className="form-control"
-            id="exampleInputEmail"
+            id="InputEmail"
             aria-describedby="emailHelp"
+            onChange={props.onChange}
+            name="username"
+            value={props.username}
           />
         </div>
-        <div className="form-group col-lg-5">
-          <label htmlFor="exampleInputPassword">Password</label>
+        <div className="form-group col-lg-6">
+          <label htmlFor="InputPassword">Password:</label>
           <input
             type="password"
             className="form-control"
-            id="exampleInputPassword"
+            id="InputPassword"
+            onChange={props.onChange}
+            name="password"
+            value={props.password}
           />
         </div>
-        <div className="form-group col-lg-5">
-          <label htmlFor="exampleInputRole">Role</label>
-          <input type="role" className="form-control" id="exampleInputRole" />
+        <div className="form-group col-lg-6">
+          <label htmlFor="InputRole">Role:</label>
+          <input
+            type="role"
+            className="form-control"
+            id="InputRole"
+            onChange={props.onChange}
+            name="role"
+            value={props.role}
+          />
         </div>
-        <button type="submit" className="btn btn-primary m-3">
+        <button
+          type="submit"
+          onClick={props.onSubmit}
+          className="btn btn-primary m-3"
+        >
           Submit
         </button>
       </div>

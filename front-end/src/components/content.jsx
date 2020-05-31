@@ -15,7 +15,7 @@ class Content extends Component {
           </p>
           <footer className="blockquote-footer">George R.R. Martin</footer>
           <br />
-          <Link to="/login">
+          <Link to="/auth">
             <button type="button" className="btn btn-primary m-2">
               Login
             </button>

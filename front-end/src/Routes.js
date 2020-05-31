@@ -4,7 +4,7 @@ import Offers from "./Pages/Offers";
 import Catalog from "./Pages/Catalog";
 import Contact from "./Pages/Contact Us";
 import Home from "./Pages/HomePage";
-import Login from "./components/login form";
+import Auth from "./Pages/userAuthentication";
 
 const Path = () => (
   <Switch>
@@ -17,8 +17,8 @@ const Path = () => (
     <Route path="/contact us">
       <Contact />
     </Route>
-    <Route path="/login">
-      <Login />
+    <Route path="/auth">
+      <Auth />
     </Route>
     <Route path="/" exact>
       <Home />
