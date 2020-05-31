@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Login from "../components/login form";
+import swal from "sweetalert";
 
 export default function Authentication() {
   const [res, setRes] = useState({
@@ -22,8 +23,13 @@ export default function Authentication() {
       body: JSON.stringify(res),
     })
       .then((response) => response.text())
-      .then((data) => console.log(data))
-      .catch((err) => console.log(err));
+      .then((data) => {
+        if (data === "You are logged in") {
+          swal("Congrats", data, "success");
+        } else {
+          swal("Sorry", data, "error");
+        }
+      });
   }
 
   return (
