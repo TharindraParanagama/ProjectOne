@@ -1,12 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import swal from "sweetalert";
 
-export default function Login(props) {
+export default function Signup() {
+  const [res, setRes] = useState({
+    username: "",
+    password: "",
+    role: "",
+  });
+
+  function handleChange(event) {
+    setRes({ ...res, [event.target.name]: event.target.value });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    axios
+      .post("http://13.58.157.19:5000/signup", {
+        username: res.username,
+        password: res.password,
+        role: res.role,
+      })
+      .then((data) => {
+        swal("You are all set", data.data, "success");
+      });
+  }
+
   return (
     <form>
       <br />
-      <div className="container">
+      <div className="container-fluid">
         <div className="display-4">
-          Please provide your information to login
+          Please provide your information to signup
         </div>
         <br />
         <div className="form-group col-lg-6">
@@ -16,9 +41,9 @@ export default function Login(props) {
             className="form-control"
             id="InputEmail"
             aria-describedby="emailHelp"
-            onChange={props.onChange}
+            onChange={handleChange}
             name="username"
-            value={props.res.username}
+            value={res.username}
           />
         </div>
         <div className="form-group col-lg-6">
@@ -27,9 +52,9 @@ export default function Login(props) {
             type="password"
             className="form-control"
             id="InputPassword"
-            onChange={props.onChange}
+            onChange={handleChange}
             name="password"
-            value={props.res.password}
+            value={res.password}
           />
         </div>
         <div className="form-group col-lg-6">
@@ -38,14 +63,14 @@ export default function Login(props) {
             type="role"
             className="form-control"
             id="InputRole"
-            onChange={props.onChange}
+            onChange={handleChange}
             name="role"
-            value={props.res.role}
+            value={res.role}
           />
         </div>
         <button
           type="submit"
-          onClick={props.onSubmit}
+          onClick={handleSubmit}
           className="btn btn-primary m-3"
         >
           Submit

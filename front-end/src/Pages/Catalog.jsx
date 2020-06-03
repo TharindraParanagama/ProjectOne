@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
+import AllBooks from "../Endpoints/AllBooks";
+import Logout from "../components/logoutSection";
+import FetchByAuthor from "../Endpoints/fetchByAuthor";
+import FilterBasedOnSupplierRating from "../Endpoints/filterBasedonSupplierRating";
+import FilterByTitle from "../Endpoints/filterByTitle";
+import FilterByPrice from "../Endpoints/filterByPrice";
 
 export default function Catalog() {
-  const [search, setSearch] = useState();
-
-  fetch("http://3.23.132.211:5000/search")
-    .then((result) => result.text())
-    .then((data) => setSearch(data));
-
   return (
     <>
-      <div>{search}</div>
+      <Logout />
+      <AllBooks />
+      <FetchByAuthor />
+      <FilterBasedOnSupplierRating />
+      <FilterByPrice />
+      <FilterByTitle />
     </>
   );
 }

@@ -10,6 +10,7 @@ class Carousel extends Component {
         id="carouselExampleIndicators"
         className="carousel slide"
         data-ride="carousel"
+        data-interval="2000"
       >
         <ol className="carousel-indicators">
           <li

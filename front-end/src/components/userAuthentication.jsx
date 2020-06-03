@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import Login from "../components/login form";
+import Login from "./login form";
 import swal from "sweetalert";
+import axios from "axios";
 
 export default function Authentication() {
+  axios.defaults.withCredentials = true;
+
   const [res, setRes] = useState({
     username: "",
     password: "",
@@ -15,19 +18,17 @@ export default function Authentication() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    fetch("http://3.23.132.211:5000/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(res),
-    })
-      .then((response) => response.text())
+    axios
+      .post("http://13.58.157.19:5000/login", {
+        username: res.username,
+        password: res.password,
+        role: res.role,
+      })
       .then((data) => {
-        if (data === "You are logged in") {
-          swal("Congrats", data, "success");
+        if (data.data === "You are logged in") {
+          swal("Congrats", data.data, "success");
         } else {
-          swal("Sorry", data, "error");
+          swal("Sorry", data.data, "error");
         }
       });
   }

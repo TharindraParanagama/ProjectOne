@@ -20,9 +20,11 @@ class Content extends Component {
               Login
             </button>
           </Link>
-          <button type="button" className="btn btn-primary">
-            SignUp
-          </button>
+          <Link to="/signup">
+            <button type="button" className="btn btn-primary">
+              SignUp
+            </button>
+          </Link>
         </blockquote>
       </div>
     );

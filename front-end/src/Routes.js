@@ -4,7 +4,8 @@ import Offers from "./Pages/Offers";
 import Catalog from "./Pages/Catalog";
 import Contact from "./Pages/Contact Us";
 import Home from "./Pages/HomePage";
-import Auth from "./Pages/userAuthentication";
+import Auth from "./components/userAuthentication";
+import Signup from "./components/signup";
 
 const Path = () => (
   <Switch>
@@ -19,6 +20,9 @@ const Path = () => (
     </Route>
     <Route path="/auth">
       <Auth />
+    </Route>
+    <Route path="/signup">
+      <Signup />
     </Route>
     <Route path="/" exact>
       <Home />
