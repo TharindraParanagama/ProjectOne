@@ -1,9 +1,9 @@
 import React from "react";
 import Enzyme, { shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import HomePage from "../Pages/HomePage";
-import Content from "../components/content";
-import Carousel from "../components/carousel-HomePage";
+import HomePage from "../Pages/homePage";
+import Content from "../Components/content";
+import Carousel from "../Components/carouselHomePage";
 
 Enzyme.configure({ adapter: new Adapter() });
 
