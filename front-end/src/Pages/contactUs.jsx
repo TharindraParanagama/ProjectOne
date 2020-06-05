@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logout from "../components/logoutSection";
+import Logout from "../Components/logoutSection";
 import axios from "axios";
 import swal from "sweetalert";
 

@@ -1,6 +1,6 @@
 import React from "react";
-import Carousel from "../components/carousel-HomePage";
-import Content from "../components/content";
+import Carousel from "../Components/carouselHomePage";
+import Content from "../Components/content";
 
 export default function Home() {
   return (

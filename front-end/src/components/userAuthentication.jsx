@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Login from "./login form";
+import Login from "./loginForm";
 import swal from "sweetalert";
 import axios from "axios";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../elements/book_outlet_logo.webp";
+import logo from "../Elements/book_outlet_logo.webp";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {

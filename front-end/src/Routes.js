@@ -1,11 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import Offers from "./Pages/Offers";
-import Catalog from "./Pages/Catalog";
-import Contact from "./Pages/Contact Us";
-import Home from "./Pages/HomePage";
-import Auth from "./components/userAuthentication";
-import Signup from "./components/signup";
+import Offers from "./Pages/offers";
+import Catalog from "./Pages/catalog";
+import Contact from "./Pages/contactUs";
+import Home from "./Pages/homePage";
+import Auth from "./Components/userAuthentication";
+import Signup from "./Components/signup";
 
 const Path = () => (
   <Switch>

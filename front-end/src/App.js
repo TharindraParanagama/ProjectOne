@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./components/navbar";
-import Path from "./Routes";
+import Navbar from "./Components/navbar";
+import Path from "./routes";
 
 export default function App() {
   return (

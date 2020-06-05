@@ -1,10 +1,11 @@
 import React from "react";
-import AllBooks from "../Endpoints/AllBooks";
-import Logout from "../components/logoutSection";
+import AllBooks from "../Endpoints/allBooks";
+import Logout from "../Components/logoutSection";
 import FetchByAuthor from "../Endpoints/fetchByAuthor";
-import FilterBasedOnSupplierRating from "../Endpoints/filterBasedonSupplierRating";
+import FilterBasedOnSupplierRating from "../Endpoints/filterBasedOnSupplierRating";
 import FilterByTitle from "../Endpoints/filterByTitle";
 import FilterByPrice from "../Endpoints/filterByPrice";
+import Search from "../GoogleBooksAPI/search";
 
 export default function Catalog() {
   return (
@@ -15,6 +16,7 @@ export default function Catalog() {
       <FilterBasedOnSupplierRating />
       <FilterByPrice />
       <FilterByTitle />
+      <Search />
     </>
   );
 }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import slide1 from "../elements/2.webp";
-import slide2 from "../elements/MemorialDayWeekendSaleHeader.jpg";
+import slide1 from "../Elements/download.jpg";
+import slide2 from "../Elements/aup.jpg";
+import slide3 from "../Elements/search.jpg";
 import "../Styling/styling.css";
 
 class Carousel extends Component {
@@ -19,14 +20,17 @@ class Carousel extends Component {
             className="active"
           ></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img className="d-block w-100" src={slide1} alt="First slide" />
           </div>
           <div className="carousel-item">
             <img className="d-block w-100" src={slide2} alt="Second slide" />
+          </div>
+          <div className="carousel-item">
+            <img className="d-block w-100" src={slide3} alt="Third slide" />
           </div>
         </div>
         <a
